@@ -1,12 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
-import { FaHome } from "react-icons/fa";
-import { FaGears } from "react-icons/fa6";
-import { BsPersonFill } from "react-icons/bs";
-import { FaWrench } from "react-icons/fa";
-import { FaBook } from "react-icons/fa";
-
 
 const Barra = () => {
     const [menuActivo, setMenuActivo] = useState(false);
@@ -15,7 +9,7 @@ const Barra = () => {
         setMenuActivo(!menuActivo);
     };
 
-
+    
     return (
             <div className="estiloBarraMenu">
             
@@ -28,32 +22,32 @@ const Barra = () => {
                     <ul className={`estiloLista ${menuActivo ? 'activo' : ''}`}>
                         <li className="itemLista">
                             <Link to="/" className="estiloLink">
-                                <span className="transformacionPalabra">HOME</span> 
-                                <span className="transformacionIcono"><FaHome /></span>
+                                <span className="open-sans">Intro</span>
+                            </Link>
+                        </li>
+                        <li className="itemLista">
+                            <Link to="/Home" className="estiloLink">
+                                <span className="open-sans">Home</span>
                             </Link>
                         </li>
                         <li className="itemLista">
                             <Link to="/About" className="estiloLink">
-                                <span className="transformacionPalabra">ABOUT</span> 
-                                <span className="transformacionIcono"><BsPersonFill /></span>
+                                <span className="open-sans">About Me</span>
                             </Link>
                         </li>
                         <li className="itemLista">
                             <Link to="/Proyectos" className="estiloLink">
-                                <span className="transformacionPalabra">PROYECTOS</span> 
-                                <span className="transformacionIcono"><FaGears /></span>
+                                <span className="open-sans">Proyectos</span>
                             </Link>
                         </li>
                         <li className="itemLista">
                             <Link to="/Experiencia" className="estiloLink">
-                                <span className="transformacionPalabra">EXPERIENCIA</span> 
-                                <span className="transformacionIcono"><FaWrench /></span>
+                                <span className="open-sans">Experiencia</span>
                             </Link>
                         </li>
                         <li className="itemLista">
                             <Link to="/Educacion" className="estiloLink">
-                                <span className="transformacionPalabra">EDUCACION</span> 
-                                <span className="transformacionIcono"><FaBook /></span>
+                                <span className="">Educacion</span>
                             </Link>
                         </li>
                     </ul>
@@ -65,3 +59,20 @@ const Barra = () => {
 }
 
 export default Barra;
+/*
+import { FaHome } from "react-icons/fa";
+import { FaGears } from "react-icons/fa6";
+import { BsPersonFill } from "react-icons/bs";
+import { FaWrench } from "react-icons/fa";
+import { FaBook } from "react-icons/fa";
+
+
+<FaHome />
+<BsPersonFill />
+<FaGears />
+<FaWrench />
+<FaBook />
+
+ELIMINAR:
+transformacionPalabra
+*/

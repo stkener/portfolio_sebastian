@@ -9,67 +9,85 @@ import react_ico from "./documents/React-icono.png";
 import sql_ico from "./documents/Sql-logo.png";
 import mysql_ico from "./documents/MySQL-icono.png";
 import c_ico from "./documents/c-ico.png";
+import boot_ico from "./documents/bootstrap_ico.png"
+import js_ico from "./documents/js-logo.png"
+import seq_ico from "./documents/seq-logo.png"
 
 import Barra from './Barra.jsx';
-import Ficha from './Ficha.jsx';
+
 
 const About = () => {
-    const iconos = [
-            python_ico,
-            kotlin_ico,
-            html_ico,
-            css_ico,            
-            nodejs_ico,
-            react_ico,            
-            sql_ico,            
-            mysql_ico,            
-            c_ico            
-    ]
-
-   
+    
     return (
         <div className="contenedorAboutGeneral">
             <Barra />
-            <div className="containerFichaCuerpo">
-            <Ficha />
+                        
             <div className="contenedorAboutSkills">
+                <div className="contenedorHabilidades">
+                    <h1 className="titulos">Skills</h1>
+                    
+                    <div className="contenedorSkills">
+                        <div>
+                            <p className="fuenteFicha">Frontend</p>
+                            <div>
+                                <span className="unaSkill"><img className="imagenLogos" src={react_ico} alt="" /><p>React</p></span>
+                                <span className="unaSkill"><img className="imagenLogos" src={html_ico} alt="" /><p>HTML</p></span>
+                                <span className="unaSkill"><img className="imagenLogos" src={css_ico} alt="" /><p>CSS</p></span>
+                                <span className="unaSkill"><img className="imagenLogos" src={js_ico} alt="" /><p>JavaScript</p></span>
+                                <span className="unaSkill"><img className="imagenLogos" src={boot_ico} alt="" /><p>Boostrap</p></span>
+                            </div>
+                        </div>
+                        <div>
+                            <p className="fuenteFicha">Backend</p>
+                            <div>
+                                <span className="unaSkill"><img className="imagenLogos" src={nodejs_ico} alt="" /><p>Node.js</p></span>
+                                <span className="unaSkill"><img className="imagenLogos" src={python_ico} alt="PythonLogo" /><p>Python</p></span>
+                                <span className="unaSkill"><img className="imagenLogos" src={kotlin_ico} alt="" /><p>Kotlin</p></span>
+                                <span className="unaSkill"><img className="imagenLogos" src={c_ico} alt="" /><p>C</p></span>
+                            </div>
+                        </div>
+                        <div className="contenedorBase">
+                            <p className="fuenteFicha">Base de datos</p>
+                            <div>
+                                <span className="unaSkill"><img className="imagenLogos" src={sql_ico} alt="" /><p>SQL</p></span>
+                                <span className="unaSkill"><img className="imagenLogos" src={mysql_ico} alt="" /><p>MySQL</p></span>
+                                <span className="unaSkill"><img className="imagenLogos" src={seq_ico} alt="" /><p>Sequelize</p></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div className="contenedorParrafoAbout">
-                    <h1 className="titulos">ABOUT</h1>
+                    <h1 className="titulos">About</h1>
                     
                     <p className="fuenteParrafosAbout">
                         Conocí la programación cursando la carrera de ingeniería en electrónica, 
-                        ahí aprendí y utilice el lenguaje C.
+                        utilice el lenguaje C y apliqué los conceptos fundamentales en un proyecto final.
                     </p> 
                     <p className="fuenteParrafosAbout">
                         Con esta pequeña introducción descubrí lo apasionante que podía ser el 
-                        mundo de la programacion, por eso decidí seguir plenamente este camino, 
-                        ingrese en la Universidad Nacional de Hurlingham (UNAHUR), donde 
-                        profundice y amplie todos mis conocimientos.
+                        mundo de la programación, por eso decidí seguir plenamente este camino, 
+                        ingrese en la Universidad Nacional de Hurlingham donde 
+                        amplie y profundice mis conocimientos.
                     </p>
                     <p className="fuenteParrafosAbout">
-                        De a poco sume nuevas habilidades, la programación orientada a objetos, 
-                        el funcionamiento de una base de datos utilizando Enterprise Architect 
-                        para el diseño y MariaDB para la implementación con SQL. Aplique Python  
-                        con estructuras de datos como listas enlazadas, colas, pilas y arboles 
-                        binarios de búsqueda. Con Kotlin adquiri los principales patrones de 
-                        diseño, trabajando mucho con github y el IDE Intellij Idea.
-                    </p>
-                    
+                        De a poco sume nuevas habilidades que me me dan una mejor formacion Fullstack. 
+                        Estudie la programación orientada a objetos con Kotlin, aplicando los principales 
+                        patrones de diseño y utilizando el IDE Intellij Idea. Conoci y puse en practica
+                        el funcionamiento de una base de datos haciendo el diseño en Enterprise Architect 
+                        y utilizando MariaDB para la implementación con SQL. Utilizando Python construí 
+                        distintas estructuras de datos como listas enlazadas, colas, pilas y arboles binarios de búsqueda. 
+                        Para construir Frontend aprendi Html, Css, ReactJs e implemente Boostrap. Para el
+                        Backend aprendi a construir Apis con JavaScript.
+                    </p>                    
                 </div>
-                <div className="contenedorHabilidades">
-                    <p className="titulos">SKILLS</p>
-                    
-                    <div className="contenedorSkills">
-                        {iconos.map((icono, index) => (
-                            <img key={index} src={icono} alt={`Icono ${index}`} className="imagenLogos"/>
-                        ))}
-                    </div>
-                </div>
-            
             </div>
-            </div>
+
         </div>
     );
 }
 export default About;
+
+/*
+<div className="containerFichaCuerpo">
+*/
