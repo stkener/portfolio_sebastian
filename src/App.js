@@ -1,6 +1,7 @@
 import './App.css';
 import { Fragment } from 'react';
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+/*import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";*/
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 import Intro from './component/Intro';
 import Home from './component/Home';
