@@ -4,6 +4,7 @@ import introCib from "../documents/introCiberDel.jpg"
 import repCel from "../documents/repCel.jpg"
 import cerraj from "../documents/cerrajeriaCert.jpg"
 import intElect from "../documents/introElect.jpg"
+import codoACodo from "../documents/CAC.jpg"
 
 
 export const titulos=[
@@ -31,15 +32,20 @@ export const cursos=[
         "año":"2020"
         
     },
-    {
+    /*{
         "nombre":"Des. Seg. Informatica",
         "img":segInf,
         "año":"2022"   
-    },
+    },*/
     {
         "nombre":"Intr. al ciberdelito",
         "img":introCib,
         "año":"2022"
+    },
+    {
+        "nombre":"FullStack Python",
+        "img":codoACodo,
+        "año":"2024"   
     }
 ];
 

@@ -17,8 +17,41 @@ import c_ico from "../documents/c-ico.png";
 import boot_ico from "../documents/bootstrap_ico.png"
 import js_ico from "../documents/js-logo.png"
 import seq_ico from "../documents/seq-logo.png"
+import sabato from "../documents/sabato.png"
 
 export const proyectosLista = [
+  {
+    nombre: "Pagina Colegio E. Sabato",
+    img: sabato,
+    descripcion: "Proyecto landing Page, en proceso, para el colegio Ernesto Sabato",
+    demo:"https://colegioernestosabatohurlingham.netlify.app/",
+    tecnologias: [html_ico, css_ico, js_ico,react_ico ],
+    link: "https://github.com/stkener/paginaSabato"
+  },
+  {
+    nombre: "Pop Tragos",
+    img: tragos,
+    descripcion: "Proyecto Final de Construccion de Interfaces de Usuarios",
+    demo:"",
+    tecnologias: [html_ico, css_ico, nodejs_ico, react_ico, boot_ico],
+    link: "https://github.com/stkener/proyectoFinalCIU-tragosPop"
+  },
+   {
+    nombre: "Pagina Estudio Juridico",
+    img: estudioJuridico,
+    descripcion: "Proyecto Frontend, practica de introduccion al html, css y js.",
+    demo:"https://zuccarolegales.netlify.app/",
+    tecnologias: [html_ico, css_ico, js_ico],
+    link: "https://github.com/stkener/Pagina-EJ-Zuccaro.git"
+  },
+  {
+    nombre: "Ahorcado con Int. Grafica",
+    img: ahorcadoGrafico,
+    descripcion: "Proyecto de interfaz grafica con Python + mini base con sqlite.",
+    demo:"",
+    tecnologias: [python_ico],
+    link: "https://github.com/stkener/Ahorcado-con-interfaz-grafica.git"
+  },
   {
     nombre: "Ahorcado en consola",
     img: ahorcadoConsola,
@@ -35,36 +68,14 @@ export const proyectosLista = [
     tecnologias: [c_ico],
     link: "https://github.com/stkener/Batalla_Naval.git"
   },
-  {
-    nombre: "Ahorcado con Int. Grafica",
-    img: ahorcadoGrafico,
-    descripcion: "Proyecto de interfaz grafica con Python + mini base con sqlite.",
-    demo:"",
-    tecnologias: [python_ico],
-    link: "https://github.com/stkener/Ahorcado-con-interfaz-grafica.git"
-  },
-  {
-    nombre: "Pagina Estudio Juridico",
-    img: estudioJuridico,
-    descripcion: "Proyecto Frontend, practica de introduccion al html, css y js.",
-    demo:"https://zuccarolegales.netlify.app/",
-    tecnologias: [html_ico, css_ico, js_ico],
-    link: "https://github.com/stkener/Pagina-EJ-Zuccaro.git"
-  },
-  {
+  
+ /*{
     nombre: "Pagina Bazar",
     img: alegra,
     descripcion: "Proyecto Frontend, practica de introduccion al html, css y js.",
     demo:"",
     tecnologias: [html_ico, css_ico, js_ico],
     link: "https://github.com/stkener/Pagina-Alegra-Deco.git"
-  },
-  {
-    nombre: "Pop Tragos",
-    img: tragos,
-    descripcion: "Proyecto Final de Construccion de Interfaces de Usuarios",
-    demo:"",
-    tecnologias: [html_ico, css_ico, nodejs_ico, react_ico, boot_ico],
-    link: "https://github.com/stkener/proyectoFinalCIU-tragosPop"
-  }
+  }*/
+  
 ];
