@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/portfolio_sebastian/static/css/main.951f28ae.css",
+    "main.js": "/portfolio_sebastian/static/js/main.82584f5d.js",
+    "static/js/453.9400a381.chunk.js": "/portfolio_sebastian/static/js/453.9400a381.chunk.js",
+    "static/media/repCel.jpg": "/portfolio_sebastian/static/media/repCel.05cf6b9e4acc985191f7.jpg",
+    "static/media/introElect.jpg": "/portfolio_sebastian/static/media/introElect.aa49b6461982fe9831ac.jpg",
+    "static/media/nDesSegInf.jpg": "/portfolio_sebastian/static/media/nDesSegInf.9d52d781b4f8577d3218.jpg",
+    "static/media/introCiberDel.jpg": "/portfolio_sebastian/static/media/introCiberDel.9647c7aac1930c7da21e.jpg",
+    "static/media/tragosPop.png": "/portfolio_sebastian/static/media/tragosPop.a126d59d1c1c9df661ce.png",
+    "static/media/desarrolloWeb.jpg": "/portfolio_sebastian/static/media/desarrolloWeb.6f18f2f6a2bb47d574b4.jpg",
+    "static/media/estudioJuridico.png": "/portfolio_sebastian/static/media/estudioJuridico.666896606b4785edb4ff.png",
+    "static/media/sabato.png": "/portfolio_sebastian/static/media/sabato.d432683e29b5ecccb37a.png",
+    "static/media/alegra.png": "/portfolio_sebastian/static/media/alegra.d31bd821412d0dfd6f1a.png",
+    "static/media/CAC.jpg": "/portfolio_sebastian/static/media/CAC.ed88a6d149b762370d2c.jpg",
+    "static/media/foto_ficha.jpg": "/portfolio_sebastian/static/media/foto_ficha.483dac75cc0d545bd710.jpg",
+    "static/media/Sql-logo.png": "/portfolio_sebastian/static/media/Sql-logo.afbd978acfdab75a2860.png",
+    "static/media/cerrajeriaCert.jpg": "/portfolio_sebastian/static/media/cerrajeriaCert.4445f9f2a6d7073e429e.jpg",
+    "static/media/CSS-logo.png": "/portfolio_sebastian/static/media/CSS-logo.0ab5bb990ff418695d40.png",
+    "static/media/HTML-logo.png": "/portfolio_sebastian/static/media/HTML-logo.31c60ec7f5687e0a7ee4.png",
+    "static/media/c-ico.png": "/portfolio_sebastian/static/media/c-ico.4754fc30f2fd4ac7cbc0.png",
+    "static/media/MySQL-icono.png": "/portfolio_sebastian/static/media/MySQL-icono.dbdc50c064011fac2b61.png",
+    "static/media/React-icono.png": "/portfolio_sebastian/static/media/React-icono.6938413c3420be9963da.png",
+    "static/media/bootstrap_ico.png": "/portfolio_sebastian/static/media/bootstrap_ico.54e4f819b53a84762d05.png",
+    "static/media/Python-logo.png": "/portfolio_sebastian/static/media/Python-logo.df775919609488040087.png",
+    "static/media/nodejs-icono.png": "/portfolio_sebastian/static/media/nodejs-icono.6e111241dc2e2663e853.png",
+    "static/media/batallaNaval.png": "/portfolio_sebastian/static/media/batallaNaval.7f7a00985a907dd458de.png",
+    "static/media/AhorcadoConsola.png": "/portfolio_sebastian/static/media/AhorcadoConsola.c43e3852216a9509a639.png",
+    "static/media/ahorcadoGrafico.png": "/portfolio_sebastian/static/media/ahorcadoGrafico.e18ae683ef816777de4d.png",
+    "static/media/seq-logo.png": "/portfolio_sebastian/static/media/seq-logo.f7d92df819cf78720d94.png",
+    "static/media/Kotlin_logo.png": "/portfolio_sebastian/static/media/Kotlin_logo.28eaff7e8eaf7205cd32.png",
+    "static/media/js-logo.png": "/portfolio_sebastian/static/media/js-logo.facba99e33ff7d7301d8.png",
+    "index.html": "/portfolio_sebastian/index.html",
+    "main.951f28ae.css.map": "/portfolio_sebastian/static/css/main.951f28ae.css.map",
+    "main.82584f5d.js.map": "/portfolio_sebastian/static/js/main.82584f5d.js.map",
+    "453.9400a381.chunk.js.map": "/portfolio_sebastian/static/js/453.9400a381.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.951f28ae.css",
+    "static/js/main.82584f5d.js"
+  ]
+}
