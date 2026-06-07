@@ -1,4 +1,25 @@
-export const experiencias =[
+export const experienciaProfesional =[
+        {
+        "Puesto":"Pasante en Sistemas / Automatizacion",
+        "Empresa":"Instituto Nacional de Tecnologia Industrial (INTI)",
+        "desdeHasta":"Ago. 2025 - Dic. 2025",
+        "funciones":[
+            "Desarrollo de una aplicación interna utilizando Power Apps.",
+            "Relevamiento y análisis de requerimientos y lógica de negocio.",
+            "Automatización de procesos mediante Power Automate.",
+            "Modelado de procesos y lógica de negocio.",
+            "Elaboración de documentación técnica y ejecución de pruebas funcionales.",
+            "Trabajo bajo supervisión profesional y en entorno institucional.",
+        ],
+        "tecnologias":[
+            "Power Apps",
+            "Power Automate",
+            "Excel", 
+            "Microsoft Teams", 
+            "Herramientas del ecosistema Microsoft 365."
+        ]
+        },    
+    
         {
             "Puesto":"Gestor de aplicaciones de soporte",
             "Empresa":"Caja de Retiros, Jubilaciones y Pensiones de la Policía Federal",
@@ -14,21 +35,42 @@ export const experiencias =[
         },
     ]
 
-export const otrasExperiencias=[
-    {
-        "Puesto":"Alumno asistente - Ayudante docente",
+export const experienciaAcademica =[
+        {
+        "Puesto":"Alumno asistente - Nuevos entornos",
         "Empresa":"Universidad Nacional de Hurlingham",
         "desdeHasta":"Actualidad",
-        "funciones":["Asistir al docente y ayudar a los alumnos en clase",
-                     "Resolver dudas de alumnos via online"]    
-    },
-    {
+        "funciones":[
+            "Asistencia al docente en clases prácticas.",
+            "Apoyo a estudiantes en resolución de consultas y actividades académicas.",
+            "Acompañamiento en trabajos prácticos y actividades de formación.",
+            "Colaboración en el diseño, desarrollo y mejora de herramientas tecnológicas para la gestión de actividades académicas.",
+            "Participación en la organización y desarrollo de actividades presenciales destinadas al acompañamiento de estudiantes de modalidad virtual.",
+        ]    
+        },    
+
+        {
+            "Puesto":"Alumno asistente - Programacion con objetos 1",
+            "Empresa":"Universidad Nacional de Hurlingham",
+            "desdeHasta":"Abr.2025 – Jul. 2025",
+            "funciones":["Asistencia al docente en clases prácticas.",
+                         "Apoyo a estudiantes en resolución de dudas técnicas.",
+                         "Acompañamiento en actividades académicas y trabajos prácticos."
+                        ],
+        },
+
+        {
         "Puesto":"Practica docente - Docente nivel inicial",
         "Empresa":"Jardin de caracter comunitario n°1 - San Vicente de Paul",
         "desdeHasta":"Abr. 2023 – Nov. 2023",
         "funciones":["Preparacion de las clases basados en el diseño curricular",
                      "Dar clases de educacion fisica en sala de 5 años"]    
     },
+
+    ]
+
+
+export const otrasExperiencias=[
     
     {
         "Puesto":"Operario de expedición",

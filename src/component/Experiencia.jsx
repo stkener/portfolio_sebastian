@@ -1,102 +1,135 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { experiencias, otrasExperiencias } from "./data/ExperienciaDatos.js"
-import Barra from './Barra.jsx';
-import {TarjetaExperienciaInformatica, TarjetaOtrasExperiencias} from "./TarjetaExperiencias.jsx"
+import { useState } from "react";
 
-import { IoIosArrowDown } from "react-icons/io";
-import { IoIosArrowUp } from "react-icons/io";
+import {
+    experienciaProfesional,
+    experienciaAcademica,
+    otrasExperiencias
+} from "./data/ExperienciaDatos";
 
-const Experiencia = () => {
-    
+const Experience = () => {
 
-    const [mostrarInformacion, setMostrarInformacion] = useState(false);
+    const [mostrarOtras, setMostrarOtras] = useState(false);
 
-    const expandir = () => {
-        setMostrarInformacion(!mostrarInformacion);
-    };
+    const CardExperiencia = ({ item }) => (
+        <div className="bg-slate-950 border border-slate-800 rounded-2xl p-6 mb-6">
+
+            <h3 className="text-xl font-semibold text-white">
+                {item.Puesto}
+            </h3>
+
+            <p className="text-sky-400 mt-1">
+                {item.Empresa}
+            </p>
+
+            <p className="text-sm text-slate-400 mt-1 mb-4">
+                {item.desdeHasta}
+            </p>
+
+            <ul className="space-y-2 text-slate-300">
+                {item.funciones.map((funcion, index) => (
+                    <li key={index}>
+                        • {funcion}
+                    </li>
+                ))}
+            </ul>
+
+            {item.tecnologias && (
+                <div className="flex flex-wrap gap-2 mt-5">
+
+                    {item.tecnologias.map((tec, index) => (
+                        <span
+                            key={index}
+                            className="px-3 py-1 text-sm rounded-lg bg-sky-900/30 border border-sky-700 text-sky-300"
+                        >
+                            {tec}
+                        </span>
+                    ))}
+
+                </div>
+            )}
+
+        </div>
+    );
 
     return (
-        
-       <div>
-            <Barra />
-                <div className="paginaProyectos">            
-                <div className="contenedorProyectos">
-                    <h1 className="titulos">Experiencia</h1>
-                    <div className="unaClase">{/*contenidoGridCuerpo cuerpoExperiencia*/}
-                        {
-                           experiencias.map((e, index) => (
-                            <TarjetaExperienciaInformatica key={index} experienciaInformatica={e} />
+        <section className="py-20 bg-slate-900">
 
-                           )) 
-                        }
+            <div className="max-w-6xl mx-auto px-6">
+
+                <h2 className="text-4xl font-bold text-white mb-12">
+                    Experiencia
+                </h2>
+
+                <div className="grid lg:grid-cols-2 gap-10">
+
+                    {/* PROFESIONAL */}
+                    <div>
+
+                        <h3 className="text-2xl font-semibold text-sky-400 mb-6">
+                            Profesional
+                        </h3>
+
+                        {experienciaProfesional.map((item, index) => (
+                            <CardExperiencia
+                                key={index}
+                                item={item}
+                            />
+                        ))}
+
                     </div>
-                    <div className="contenidoGridCuerpo">
-                        <div className="contenedorTituloIconoExp">
-                            <p className="letraPuestoTrabajo">Experiencias fuera de informatica</p>
-                            <button onClick={expandir} className="estiloBotonExpandible ">
-                                {mostrarInformacion ? 
-                                    <span className="estiloIconoBotonExp"><IoIosArrowUp /></span> 
-                                    : 
-                                    <span className="estiloIconoBotonExp"><IoIosArrowDown /></span>
-                                }
-                            </button>
-                        </div>
-                        <div>
-                        {mostrarInformacion && (
-                            otrasExperiencias.map((e, index) => (
-                                <TarjetaOtrasExperiencias key={index} otraExperiencia={e}/>
-                                /*<article key={index} class="articuloTrabajo cuerpoExperiencia">
-                                    <div className="contenedorInicioExpe">
-                                        <span class="letraPuestoTrabajo">{e.Puesto}</span>
-                                        <span class="letraTrabajoCursiva">{e.Empresa}</span>
-                                        <span class="letraTrabajoCursiva">{e.desdeHasta}</span>           
-                                    </div>
-                                    <div className="">
-                                        <p class="subTitulos">Funciones</p>
-                                        <ul class="estiloListaTrabajo letraTrabajo">
-                                            {e.funciones.map((f, index) => (
-                                                <li key={index}>{f}</li>
-                                                ))
-                                            }
-                                        </ul>                                    
-                                    </div>
-                                </article>*/
-                            )) 
-                        )}
-                        </div>
+
+                    {/* ACADÉMICA */}
+                    <div>
+
+                        <h3 className="text-2xl font-semibold text-sky-400 mb-6">
+                            Académica
+                        </h3>
+
+                        {experienciaAcademica.map((item, index) => (
+                            <CardExperiencia
+                                key={index}
+                                item={item}
+                            />
+                        ))}
+
                     </div>
+
                 </div>
+
+                {/* OTRAS EXPERIENCIAS */}
+
+                <div className="mt-12">
+
+                    <button
+                        onClick={() => setMostrarOtras(!mostrarOtras)}
+                        className="text-sky-400 font-medium hover:text-sky-300 transition"
+                    >
+                        {mostrarOtras
+                            ? "Ocultar otras experiencias ▲"
+                            : "Ver otras experiencias ▼"}
+                    </button>
+
+                    {mostrarOtras && (
+
+                        <div className="mt-8">
+
+                            {otrasExperiencias.map((item, index) => (
+                                <CardExperiencia
+                                    key={index}
+                                    item={item}
+                                />
+                            ))}
+
+                        </div>
+
+                    )}
+
+                </div>
+
             </div>
-       </div> 
-       
+
+        </section>
     );
-}
-export default Experiencia;
+};
 
-/*
-</button>
-*/
-
-
-
-/*
-<article class="">
-                            <p><span class="">Gestor de aplicaciones de soporte</span><br>
-                            <span class="">Caja de Retiros, Jubilaciones y Pensiones de la Policía Federal</span><br>
-                            <span class="">{}</span></p>
-
-                            <p class="letraTrabajo estiloSubtituloTrabajo">FUNCIONES</p>
-                            <ul class="letraTrabajo estiloListaTrabajo">
-                                <li>Desarrollo y mantenimiento de funcionalidades en el sistema de la Institución.</li>
-                                <li>Prueba e implementación de las aplicaciones informáticas de la Institución.</li>
-                                <li>Mantenimiento y soporte de las aplicaciones informáticas de la Institución.</li>
-                            </ul>
-
-                            <p class="letraTrabajo estiloSubtituloTrabajo">TECNOLOGIAS</p>
-                            <ul class="letraTrabajo estiloListaTrabajo">
-                                <li>Base de datos Informix</li>
-                                <li>SQL</li>
-                                <li>Genero Business Development Language (BDL) - Informix 4GL</li>
-                            </ul>
-                        </article>
-*/
+export default Experience;

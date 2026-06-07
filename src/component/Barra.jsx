@@ -1,80 +1,133 @@
-import React, { Fragment, useEffect, useState } from "react";
-/*import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";*/
-import { Link } from "react-router-dom";
-/*import { HashRouter as Router, Route, Routes } from "react-router-dom";*/
+import { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi";
 
+const Navbar = () => {
 
-const Barra = () => {
-    const [menuActivo, setMenuActivo] = useState(false);
+    const [menuAbierto, setMenuAbierto] = useState(false);
 
-    const activarMenu = () => {
-        setMenuActivo(!menuActivo);
-    };
+    const links = [
+        {
+            nombre: "Sobre mí",
+            href: "#about"
+        },
+        {
+            nombre: "Tecnologías",
+            href: "#skills"
+        },
+        {
+            nombre: "Experiencia",
+            href: "#experiencia"
+        },
+        {
+            nombre: "Proyectos",
+            href: "#proyectos"
+        },
+        {
+            nombre: "Educación",
+            href: "#educacion"
+        }
+    ];
 
-    
     return (
-            <div className="estiloBarraMenu">
-            
-                <div className={`contenedorIconoMenu ${menuActivo ? 'cruz' : ''}`} onClick={activarMenu}>
-                    <span className="lineaUno"></span>
-                    <span className="lineaDos"></span>
-                    <span className="lineaTres"></span>
+        <header
+            className="
+                fixed
+                top-0
+                left-0
+                w-full
+                z-50
+                bg-transparent
+                
+                
+                
+            "
+        >
+            <div className="max-w-6xl mx-auto px-6">
+
+                <div className="h-16 flex items-center justify-end">
+
+                    {/* DESKTOP */}
+                    
+                    <nav className="hidden md:flex items-center gap-8">
+                    
+
+                        {links.map((link) => (
+                            <a
+                                key={link.nombre}
+                                href={link.href}
+                                className="
+                                    text-slate-300
+                                    hover:text-sky-400
+                                    transition-colors
+                                "
+                            >
+                                {link.nombre}
+                            </a>
+                        ))}
+
+                    </nav>
+
+                    {/* BOTON MOBILE */}
+
+                    <button
+                        className="
+                            md:hidden
+                            text-white
+                            text-3xl
+                        "
+                        onClick={() =>
+                            setMenuAbierto(!menuAbierto)
+                        }
+                    >
+                        {menuAbierto ? <HiX /> : <HiMenu />}
+                    </button>
+
                 </div>
-                <div >
-                    <ul className={`estiloLista ${menuActivo ? 'activo' : ''}`}>
-                        <li className="itemLista">
-                            <Link to="/" className="estiloLink">
-                                <span className="open-sans">Intro</span>
-                            </Link>
-                        </li>
-                        <li className="itemLista">
-                            <Link to="/Home" className="estiloLink">
-                                <span className="open-sans">Home</span>
-                            </Link>
-                        </li>
-                        <li className="itemLista">
-                            <Link to="/About" className="estiloLink">
-                                <span className="open-sans">About Me</span>
-                            </Link>
-                        </li>
-                        <li className="itemLista">
-                            <Link to="/Proyectos" className="estiloLink">
-                                <span className="open-sans">Proyectos</span>
-                            </Link>
-                        </li>
-                        <li className="itemLista">
-                            <Link to="/Experiencia" className="estiloLink">
-                                <span className="open-sans">Experiencia</span>
-                            </Link>
-                        </li>
-                        <li className="itemLista">
-                            <Link to="/Educacion" className="estiloLink">
-                                <span className="">Educacion</span>
-                            </Link>
-                        </li>
-                    </ul>
+
+            </div>
+
+            {/* MENU MOBILE */}
+
+            {menuAbierto && (
+
+                <div
+                    className="
+                        md:hidden
+                        bg-slate-950
+                        border-t
+                        border-slate-800
+                    "
+                >
+
+                    <div className="flex flex-col px-6 py-4">
+
+                        {links.map((link) => (
+
+                            <a
+                                key={link.nombre}
+                                href={link.href}
+                                className="
+                                    py-3
+                                    text-slate-300
+                                    hover:text-sky-400
+                                "
+                                onClick={() =>
+                                    setMenuAbierto(false)
+                                }
+                            >
+                                {link.nombre}
+                            </a>
+
+                        ))}
+
+                    </div>
+
                 </div>
-            
-            
-        </div>
+
+            )}
+
+        </header>
     );
-}
+};
 
-export default Barra;
-/*
-import { FaHome } from "react-icons/fa";
-import { FaGears } from "react-icons/fa6";
-import { BsPersonFill } from "react-icons/bs";
-import { FaWrench } from "react-icons/fa";
-import { FaBook } from "react-icons/fa";
-
-
-<FaHome />
-<BsPersonFill />
-<FaGears />
-<FaWrench />
-<FaBook />
-
-ELIMINAR:
-transformacionPalabra
-*/
+export default Navbar;

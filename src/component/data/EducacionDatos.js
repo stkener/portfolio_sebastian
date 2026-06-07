@@ -7,7 +7,7 @@ import intElect from "../documents/introElect.jpg"
 import codoACodo from "../documents/CAC.jpg"
 
 
-export const titulos=[
+export const formacionAcademica=[
     {
         "titulo":"Tecnicatura Universitaria en Programacion",
         "institucion":"Uiversidad Nacional de Hurlingham (UNAHUR)",
@@ -27,42 +27,48 @@ export const titulos=[
 
 export const cursos=[
     {
+        "nombre":"FullStack Python",
+        "img":codoACodo,
+        "año":"2024"   
+    },
+    {
         "nombre":"Desarrollo Web",
         "img":desWeb,
         "año":"2020"
-        
     },
-    /*{
+    {
         "nombre":"Des. Seg. Informatica",
         "img":segInf,
         "año":"2022"   
-    },*/
+    },
     {
         "nombre":"Intr. al ciberdelito",
         "img":introCib,
         "año":"2022"
     },
     {
-        "nombre":"FullStack Python",
-        "img":codoACodo,
-        "año":"2024"   
-    }
-];
-
-export const otrosCursos=[
-    {
         "nombre":"Reparacion de celulares",
         "img":repCel,
         "año":"2019"    
     },
     {
-        "nombre":"Cerrajeria",
-        "img":cerraj,
-        "año":"2016"   
-    },
-    {
         "nombre":"Intr. a la electronica",
         "img":intElect,
         "año":"2014"
+    },
+    /*{
+        "nombre":"Cerrajeria",
+        "img":cerraj,
+        "año":"2016"   
+    }*/
+];
+
+export const participacionAcademica=[
+    {
+        "nombre":"Proyecto +TEC UNAHUR 2025"
+    },
+    {
+        "nombre":"Alumno asistente universitario"
     }
+        
 ];

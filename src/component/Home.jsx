@@ -1,22 +1,30 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
-import Barra from './Barra.jsx';
-import Ficha from './Ficha.jsx';
+import React from "react";
+import Barra from "./Barra";
+import Hero from "./Hero";
+import About from "./About";
+import Skills from "./Skills";
+import Experience from "./Experiencia";
+import Proyectos from "./Proyectos";
+import Educacion from "./Educacion";
 
 const Home = () => {
     return (
-        <div className="">
+        <>
             <Barra />
-            <div className="paginaProyectos">{/*containerFichaCuerpo*/}
-                <Ficha />
-            </div>
-            
-        </div>
+
+            <main className="bg-slate-950 text-white min-h-screen overflow-x-hidden">
+
+                {/* HERO */}
+                <Hero />
+                <About />
+                <Skills />
+                <Experience />
+                <Proyectos />
+                <Educacion />
+            </main>
+        </>
     );
-}
+};
+
 export default Home;
-
-/*
-
-*/

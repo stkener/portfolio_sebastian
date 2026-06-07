@@ -1,9 +1,7 @@
-import React, { useRef, useState } from "react"; /*, { Fragment, useEffect, useState }*/
+/*import React, { useRef, useState } from "react";
 
 import Overlay from 'react-bootstrap/Overlay';
 import Tooltip from 'react-bootstrap/Tooltip';
-
-/*import 'bootstrap/dist/css/bootstrap.min.css';*/
 
 import fotoFicha from "./documents/foto_ficha.jpg";
 
@@ -11,21 +9,21 @@ import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa6";
 import { FaCopy } from 'react-icons/fa';
 import { LiaFileDownloadSolid } from "react-icons/lia";
-//import cvpdf from "/documents/CV_sebastian.pdf"
+
 
 const Ficha = () => {
-    const correo = "stkener@gmail.com"; // El correo a copiar
+    const correo = "stkener@gmail.com";
     const [mensajeCopiado, setMensajeCopiado] = useState(false);
     const target = useRef(null);
     const timeoutRef = useRef(null);
 
-    // Función para copiar al portapapeles
+
     const copiarAlPortapapeles = () => {
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
         }
 
-        // Crear un input temporal para copiar el texto
+
         const input = document.createElement('input');
         input.value = correo; // Establece el valor del correo
         document.body.appendChild(input); // Agrega el input al DOM
@@ -76,8 +74,72 @@ const Ficha = () => {
     );
 }
 export default Ficha;
-/*
-<FaGithub className="tamanioIconoGithub"/>
-<CiLinkedin className="tamanioIconoLinkedin"/>
 */
+
+import React from "react";
+import fotoFicha from "./documents/foto_ficha.jpg";
+
+const Hero = () => {
+    return (
+        <section className="min-h-screen flex items-center pt-20 md:pt-0">
+            <div className="max-w-6xl mx-auto px-6 w-full">
+
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+
+                    {/* TEXTO */}
+                    <div>
+
+                        <p className="text-sky-400 font-medium mb-4">
+                            Hola, soy
+                        </p>
+
+                        <h1 className="text-5xl md:text-7xl font-bold mb-6">
+                            Sebastian Kener
+                        </h1>
+
+                        <h2 className="text-2xl md:text-4xl text-slate-300 mb-6">
+                            Técnico Universitario en Programación
+                        </h2>
+
+                        <p className="max-w-2xl text-lg text-slate-400 mb-10">
+                            Desarrollo de software, tecnología educativa y participación en proyectos académicos.
+                        </p>
+
+                        <div className="flex flex-wrap gap-4">
+                            <button className="bg-sky-500 hover:bg-sky-400 text-white px-6 py-3 rounded-lg font-medium transition">
+                                Ver proyectos
+                            </button>
+
+                            <button className="border border-slate-600 hover:border-sky-400 px-6 py-3 rounded-lg transition">
+                                Descargar CV
+                            </button>
+                        </div>
+
+                    </div>
+
+                    {/* FOTO */}
+                    <div className="flex justify-center">
+                        <img
+                            src={fotoFicha}
+                            alt="Sebastian Kener"
+                            className="
+                                w-72
+                                h-72
+                                object-cover
+                                rounded-full
+                                border-4
+                                border-sky-500
+                                shadow-xl
+                            "
+                        />
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    );
+};
+
+export default Hero;
 

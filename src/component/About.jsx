@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+/*import React, { Fragment, useEffect, useState } from "react";
 
 import python_ico from "./documents/Python-logo.png";
 import kotlin_ico from "./documents/Kotlin_logo.png";
@@ -23,38 +23,7 @@ const About = () => {
             <Barra />
                         
             <div className="contenedorAboutSkills">
-                <div className="contenedorHabilidades">
-                    <h1 className="titulos">Skills</h1>
-                    
-                    <div className="contenedorSkills">
-                        <div>
-                            <p className="fuenteFicha">Frontend</p>
-                            <div>
-                                <span className="unaSkill"><img className="imagenLogos" src={react_ico} alt="" /><p>React</p></span>
-                                <span className="unaSkill"><img className="imagenLogos" src={html_ico} alt="" /><p>HTML</p></span>
-                                <span className="unaSkill"><img className="imagenLogos" src={css_ico} alt="" /><p>CSS</p></span>
-                                <span className="unaSkill"><img className="imagenLogos" src={js_ico} alt="" /><p>JavaScript</p></span>
-                                <span className="unaSkill"><img className="imagenLogos" src={boot_ico} alt="" /><p>Boostrap</p></span>
-                            </div>
-                        </div>
-                        <div>
-                            <p className="fuenteFicha">Backend</p>
-                            <div>
-                                <span className="unaSkill"><img className="imagenLogos" src={nodejs_ico} alt="" /><p>Node.js</p></span>
-                                <span className="unaSkill"><img className="imagenLogos" src={python_ico} alt="PythonLogo" /><p>Python</p></span>
-                                <span className="unaSkill"><img className="imagenLogos" src={kotlin_ico} alt="" /><p>Kotlin</p></span>
-                                <span className="unaSkill"><img className="imagenLogos" src={c_ico} alt="" /><p>C</p></span>
-                            </div>
-                        </div>
-                        <div className="contenedorBase">
-                            <p className="fuenteFicha">Base de datos</p>
-                            <div>
-                                <span className="unaSkill"><img className="imagenLogos" src={sql_ico} alt="" /><p>SQL</p></span>
-                                <span className="unaSkill"><img className="imagenLogos" src={mysql_ico} alt="" /><p>MySQL</p></span>
-                                <span className="unaSkill"><img className="imagenLogos" src={seq_ico} alt="" /><p>Sequelize</p></span>
-                            </div>
-                        </div>
-                    </div>
+                
                 </div>
 
                 <div className="contenedorParrafoAbout">
@@ -87,7 +56,54 @@ const About = () => {
     );
 }
 export default About;
-
-/*
-<div className="containerFichaCuerpo">
 */
+
+import python_ico from "./documents/Python-logo.png";
+import kotlin_ico from "./documents/Kotlin_logo.png";
+import html_ico from "./documents/HTML-logo.png";
+import css_ico from "./documents/CSS-logo.png";
+import nodejs_ico from "./documents/nodejs-icono.png";
+import react_ico from "./documents/React-icono.png";
+import sql_ico from "./documents/Sql-logo.png";
+import mysql_ico from "./documents/MySQL-icono.png";
+import c_ico from "./documents/c-ico.png";
+import boot_ico from "./documents/bootstrap_ico.png"
+import js_ico from "./documents/js-logo.png"
+import seq_ico from "./documents/seq-logo.png"
+
+const About = () => {
+    return (
+        <section className="py-24 bg-slate-900">
+            <div className="max-w-5xl mx-auto px-6">
+
+                <h2 className="text-4xl font-bold text-white mb-10">
+                    Sobre mí
+                </h2>
+
+                <div className="space-y-6 text-slate-300 text-lg leading-relaxed">
+
+                    <p>
+                        Técnico Universitario en Programación con interés en el desarrollo web, la tecnología educativa y los proyectos académicos.
+                    </p>
+
+                    <p>
+                        Actualmente participo en proyectos de software y en iniciativas
+                        universitarias vinculadas a educación, innovación y tecnología,
+                        desarrollando soluciones con herramientas modernas del ecosistema web.
+                    </p>
+
+                    <p>
+                        Mi experiencia combina formación técnica, participación académica y
+                        trabajo colaborativo, buscando integrar el desarrollo tecnológico con
+                        la generación de valor en contextos educativos y sociales.
+                    </p>
+
+                </div>
+
+            </div>
+            
+        </section>
+    );
+};
+
+export default About;

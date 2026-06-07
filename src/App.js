@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 /*import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";*/
 import { /*HashRouter as Router,*/ Route, Routes } from "react-router-dom";
 
-import Intro from './component/Intro';
+
 import Home from './component/Home';
 /*import Barra from "./component/Barra";-*/
 import About from "./component/About";
@@ -16,7 +16,7 @@ function App() {
     /*<Router>*/
       <div>
         <Routes>
-          <Route path="/" element={<Intro />} />
+          <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Proyectos" element={<Proyectos />} />
