@@ -47,9 +47,9 @@ export const desarrolloWeb = [
   {
     nombre: "Pagina Estudio Juridico",
     img: estudioJuridico,
-    descripcion: "Proyecto Frontend, practica de introduccion al html, css y js.",
+    descripcion: "Landing Page para Estudio Juridico, React, Html, Js, Tailwind",
     demo:"https://zuccarolegales.netlify.app/",
-    tecnologias: [html_ico, css_ico, js_ico],
+    tecnologias: [react_ico, html_ico, js_ico, tailwin_ico],
     link: "https://github.com/stkener/Pagina-EJ-Zuccaro.git"
   },
 ];
