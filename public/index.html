@@ -70,6 +70,17 @@
 
     <meta name="google-site-verification" content="0R2S5qHPICP57sKcIHT_NSMx-Qj8biX563hjW4LaqkE" />
 
+    <script>
+      (function () {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+
+        if (redirect && redirect !== location.pathname) {
+        window.history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
   </head>
   <body class="estiloBody">
     <noscript>You need to enable JavaScript to run this app.</noscript>

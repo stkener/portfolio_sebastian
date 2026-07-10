@@ -11,7 +11,7 @@ const Educacion = () => {
     const [certificadoActivo, setCertificadoActivo] = useState(null);
 
     return (
-        <section className="py-20 bg-slate-900">
+        <section id="educacion" className="py-20 bg-slate-900">
 
             <div className="max-w-6xl mx-auto px-6">
 
@@ -120,42 +120,7 @@ const Educacion = () => {
 
                 </div>
 
-                {/* PARTICIPACION */}
-
-                <div>
-
-                    <h3 className="text-2xl font-semibold text-sky-400 mb-6">
-                        Participación Académica
-                    </h3>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-
-                        {participacionAcademica.map((item, index) => (
-
-                            <div
-                                key={index}
-                                className="
-                                    bg-slate-950
-                                    border
-                                    border-slate-800
-                                    rounded-2xl
-                                    p-5
-                                "
-                            >
-
-                                <p className="text-white text-lg">
-                                    {item.nombre}
-                                </p>
-
-                            </div>
-
-                        ))}
-
-                    </div>
-
-                </div>
-
-            </div>
+            </div>    
 
             {/* MODAL CERTIFICADO */}
 

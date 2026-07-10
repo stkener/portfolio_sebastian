@@ -10,35 +10,68 @@ import c_ico from "./documents/c-ico.png";
 import boot_ico from "./documents/bootstrap_ico.png";
 import js_ico from "./documents/js-logo.png";
 import seq_ico from "./documents/seq-logo.png";
+import tail_ico from "./documents/tailwin_ico.png";
+import post_ico from "./documents/postgre.png";
+import sqlite_ico from "./documents/sqlite.png";
+import express_ico from "./documents/express.png";
+import restapi_ico from "./documents/restapi.png";
+import powau_ico from "./documents/poweautomate.png"
+import powapp_ico from "./documents/powerapps.png"
+import git_ico from "./documents/git.png"
+import github_ico from "./documents/github.png"
+import vscode_ico from "./documents/vscode.png"
+import postman_ico from "./documents/postman.png"
 
 const frontend = [
     { nombre: "React", icono: react_ico },
+    { nombre: "JavaScript", icono: js_ico },
     { nombre: "HTML", icono: html_ico },
     { nombre: "CSS", icono: css_ico },
-    { nombre: "JavaScript", icono: js_ico },
+    { nombre: "Tailwind", icono: tail_ico },
     { nombre: "Bootstrap", icono: boot_ico }
 ];
 
 const backend = [
     { nombre: "Node.js", icono: nodejs_ico },
-    { nombre: "Python", icono: python_ico },
-    { nombre: "Kotlin", icono: kotlin_ico },
-    { nombre: "C", icono: c_ico }
+    { nombre: "Express", icono: express_ico},
+    { nombre: "REST APIs", icono: restapi_ico},
+    
 ];
 
 const bases = [
-    { nombre: "SQL", icono: sql_ico },
     { nombre: "MySQL", icono: mysql_ico },
-    { nombre: "Sequelize", icono: seq_ico }
+    { nombre: "PostgreSQL", icono: post_ico },
+    { nombre: "Sequelize", icono: seq_ico },
+    { nombre: "Sqlite", icono:sqlite_ico }
+];
+
+const lenguajes = [
+    { nombre: "Python", icono: python_ico },
+    { nombre: "JavaScript", icono: js_ico },
+    { nombre: "Kotlin", icono: kotlin_ico },
+    { nombre: "C", icono: c_ico },
+    { nombre: "SQL", icono: sql_ico },
+];
+
+const automatizacion = [
+    { nombre: "Microsoft Power Automate", icono: powau_ico},
+    { nombre: "Microsoft Power Apps", icono: powapp_ico},
+];
+
+const herramientas = [
+    { nombre: "Git", icono: git_ico},
+    { nombre: "GitHub", icono: github_ico},
+    { nombre: "Vs Code", icono: vscode_ico},
+    { nombre: "Postman", icono: postman_ico},
 ];
 
 const Skills = () => {
     return (
-        <section className="py-24 bg-slate-950">
+        <section id="skills" className="py-24 bg-slate-950">
             <div className="max-w-6xl mx-auto px-6">
 
                 <h2 className="text-4xl font-bold text-white mb-16">
-                    Tecnologías
+                    Tecnologías y Herramientas
                 </h2>
 
                 <div className="grid md:grid-cols-3 gap-8">
@@ -121,6 +154,79 @@ const Skills = () => {
                         </div>
                     </div>
 
+                    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                        <h3 className="text-2xl font-semibold text-sky-400 mb-6">
+                            Lenguajes
+                        </h3>
+
+                        <div className="space-y-4">
+                            {lenguajes.map((skill) => (
+                                <div
+                                    key={skill.nombre}
+                                    className="flex items-center gap-3"
+                                >
+                                    <img
+                                        src={skill.icono}
+                                        alt={skill.nombre}
+                                        className="w-8 h-8 object-contain"
+                                    />
+
+                                    <span className="text-slate-200">
+                                        {skill.nombre}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                        <h3 className="text-2xl font-semibold text-sky-400 mb-6">
+                            Automatizacion
+                        </h3>
+
+                        <div className="space-y-4">
+                            {automatizacion.map((skill) => (
+                                <div
+                                    key={skill.nombre}
+                                    className="flex items-center gap-3"
+                                >
+                                    <img
+                                        src={skill.icono}
+                                        alt={skill.nombre}
+                                        className="w-8 h-8 object-contain"
+                                    />
+
+                                    <span className="text-slate-200">
+                                        {skill.nombre}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                        <h3 className="text-2xl font-semibold text-sky-400 mb-6">
+                            Herramientas
+                        </h3>
+
+                        <div className="space-y-4">
+                            {herramientas.map((skill) => (
+                                <div
+                                    key={skill.nombre}
+                                    className="flex items-center gap-3"
+                                >
+                                    <img
+                                        src={skill.icono}
+                                        alt={skill.nombre}
+                                        className="w-8 h-8 object-contain"
+                                    />
+
+                                    <span className="text-slate-200">
+                                        {skill.nombre}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    
                 </div>
 
             </div>

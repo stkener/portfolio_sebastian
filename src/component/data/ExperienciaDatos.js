@@ -1,6 +1,6 @@
 export const experienciaProfesional =[
         {
-        "Puesto":"Pasante en Sistemas / Automatizacion",
+        "Puesto":"Pasante Desarrollo de Software y Automatización",
         "Empresa":"Instituto Nacional de Tecnologia Industrial (INTI)",
         "desdeHasta":"Ago. 2025 - Dic. 2025",
         "funciones":[
@@ -21,12 +21,14 @@ export const experienciaProfesional =[
         },    
     
         {
-            "Puesto":"Gestor de aplicaciones de soporte",
+            "Puesto":"Soporte de Sistemas y Desarrollo de Aplicaciones",
             "Empresa":"Caja de Retiros, Jubilaciones y Pensiones de la Policía Federal",
             "desdeHasta":"Oct.2021 – Mar. 2023",
             "funciones":["Desarrollo y mantenimiento de funcionalidades en el sistema de la Institución",
-                         "Prueba e implementación de las aplicaciones informáticas de la Institución",
+                         "Soporte de Sistemas y Desarrollo de Aplicaciones",
                          "Mantenimiento y soporte de las aplicaciones informáticas de la Institución",
+                         "Consultas y mantenimiento sobre bases de datos Informix.",
+                         "Desarrollo utilizando Genero BDL (Informix 4GL)."
                         ],
             "tecnologias":["Base de datos Informix",
                            "SQL",
@@ -37,7 +39,7 @@ export const experienciaProfesional =[
 
 export const experienciaAcademica =[
         {
-        "Puesto":"Alumno asistente - Nuevos entornos",
+        "Puesto":"Estudiante asistente - Nuevos entornos",
         "Empresa":"Universidad Nacional de Hurlingham",
         "desdeHasta":"Actualidad",
         "funciones":[
@@ -50,7 +52,7 @@ export const experienciaAcademica =[
         },    
 
         {
-            "Puesto":"Alumno asistente - Programacion con objetos 1",
+            "Puesto":"Estudiante asistente - Programacion con objetos 1",
             "Empresa":"Universidad Nacional de Hurlingham",
             "desdeHasta":"Abr.2025 – Jul. 2025",
             "funciones":["Asistencia al docente en clases prácticas.",
@@ -63,8 +65,10 @@ export const experienciaAcademica =[
         "Puesto":"Practica docente - Docente nivel inicial",
         "Empresa":"Jardin de caracter comunitario n°1 - San Vicente de Paul",
         "desdeHasta":"Abr. 2023 – Nov. 2023",
-        "funciones":["Preparacion de las clases basados en el diseño curricular",
-                     "Dar clases de educacion fisica en sala de 5 años"]    
+        "funciones":["Planificación de propuestas pedagógicas basados en el diseño curricular",
+                     "Desarrollo de actividades de Educación Física para Nivel Inicial (sala de 5).",
+                     "Gestión de grupos y acompañamiento del aprendizaje."
+                    ]    
     },
 
     ]

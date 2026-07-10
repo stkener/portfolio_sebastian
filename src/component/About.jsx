@@ -73,7 +73,7 @@ import seq_ico from "./documents/seq-logo.png"
 
 const About = () => {
     return (
-        <section className="py-24 bg-slate-900">
+        <section id="about" className="py-24 bg-slate-900">
             <div className="max-w-5xl mx-auto px-6">
 
                 <h2 className="text-4xl font-bold text-white mb-10">
@@ -83,19 +83,23 @@ const About = () => {
                 <div className="space-y-6 text-slate-300 text-lg leading-relaxed">
 
                     <p>
-                        Técnico Universitario en Programación con interés en el desarrollo web, la tecnología educativa y los proyectos académicos.
+                        Soy Técnico Universitario en Programación y estudiante de la Licenciatura en Informática en la Universidad Nacional de Hurlingham.
                     </p>
 
                     <p>
-                        Actualmente participo en proyectos de software y en iniciativas
-                        universitarias vinculadas a educación, innovación y tecnología,
-                        desarrollando soluciones con herramientas modernas del ecosistema web.
+                        Disfruto desarrollar soluciones de software que ayuden a simplificar procesos, organizar información y resolver problemas reales dentro de organizaciones e instituciones.
                     </p>
 
                     <p>
-                        Mi experiencia combina formación técnica, participación académica y
-                        trabajo colaborativo, buscando integrar el desarrollo tecnológico con
-                        la generación de valor en contextos educativos y sociales.
+                        Durante mi formación participé en proyectos académicos e institucionales, desarrollando aplicaciones web, automatizaciones y herramientas de gestión. Realicé una práctica profesional en el INTI, donde diseñé un sistema automatizado de alertas para el seguimiento de calibraciones mediante Microsoft Power Platform.
+                    </p>
+
+                    <p>
+                        Mi recorrido también incluye experiencia como Estudiante Asistente en la Universidad Nacional de Hurlingham, donde combiné el acompañamiento académico con el desarrollo de herramientas digitales para optimizar la organización de actividades educativas.
+                    </p>
+
+                    <p>
+                        Me interesa seguir creciendo como desarrollador, combinando el desarrollo de software, la automatización de procesos, la documentación técnica y la mejora continua.
                     </p>
 
                 </div>

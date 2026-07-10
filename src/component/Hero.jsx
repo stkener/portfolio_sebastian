@@ -21,7 +21,7 @@ const copiarMail = () => {
     }, 2000);
 };
     return (
-        <section className="min-h-screen flex items-center pt-20 md:pt-0">
+        <section id="hero" className="min-h-screen flex items-center pt-20 md:pt-0">
             <div className="max-w-6xl mx-auto px-6 w-full">
 
                 <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -38,11 +38,11 @@ const copiarMail = () => {
                         </h1>
 
                         <h2 className="text-2xl md:text-4xl text-slate-300 mb-6">
-                            Técnico Universitario en Programación
+                            Desarrollador de Software
                         </h2>
 
                         <p className="max-w-2xl text-lg text-slate-400 mb-4">
-                            Desarrollo de software, tecnología educativa y participación en proyectos académicos.
+                            Desarrollo aplicaciones web y herramientas de automatización orientadas a optimizar procesos, gestionar información y apoyar proyectos educativos e institucionales.
                         </p>
 
                         <div className="flex flex-wrap items-center gap-6 mt-8 mb-8">
@@ -100,7 +100,7 @@ const copiarMail = () => {
                                         ?.scrollIntoView({ behavior: "smooth" })
                                 }
                                 className="bg-sky-500 hover:bg-sky-400 text-white px-6 py-3 rounded-lg font-medium transition">
-                                Ver proyectos
+                                Explorar proyectos
                             </button>
 
                             <button 

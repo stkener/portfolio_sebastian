@@ -52,12 +52,12 @@ const Experience = () => {
     );
 
     return (
-        <section className="py-20 bg-slate-900">
+        <section id="experiencia" className="py-20 bg-slate-900">
 
             <div className="max-w-6xl mx-auto px-6">
 
                 <h2 className="text-4xl font-bold text-white mb-12">
-                    Experiencia
+                    Experiencia y Trayectoria
                 </h2>
 
                 <div className="grid lg:grid-cols-2 gap-10">

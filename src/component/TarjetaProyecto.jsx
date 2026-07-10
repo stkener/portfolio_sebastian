@@ -1,4 +1,5 @@
 import { FaGithub, FaEye } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Tarjeta = ({ proyecto }) => {
     return (
@@ -64,99 +65,81 @@ const Tarjeta = ({ proyecto }) => {
                     ))}
                 </div>
 
-                <div className="
-                    mt-auto
-                    flex
-                    gap-3
-                ">
+                <div
+                    className="
+                        mt-auto
+                        flex
+                        gap-3"
+                >
 
-                    {proyecto.demo ? (
-                        <a
-                            href={proyecto.demo}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="
-                                flex-1
-                                flex
-                                items-center
-                                justify-center
-                                gap-2
-                                bg-sky-500
-                                hover:bg-sky-400
-                                text-white
-                                py-3
-                                rounded-lg
-                                transition
-                            "
-                        >
-                            Demo
-                            <FaEye />
-                        </a>
-                    ) : (
-                        <span
-                            className="
-                                flex-1
-                                flex
-                                items-center
-                                justify-center
-                                gap-2
-                                bg-slate-800
-                                text-slate-500
-                                py-3
-                                rounded-lg
-                                cursor-not-allowed
-                            "
-                        >
-                            Demo
-                            <FaEye />
-                        </span>
-                    )}
+                    {proyecto.botones.map((boton, idx) => {
+                        const esGithub = boton.icono === "github";
+                        const clases = boton.url
+                            ? `
+                            flex-1
+                            flex
+                            items-center
+                            justify-center
+                            gap-2
+                            ${esGithub
+                                ? "border border-slate-600 hover:border-sky-400 text-white"
+                                : "bg-sky-500 hover:bg-sky-400 text-white"}
+                            py-3
+                            rounded-lg
+                            transition
+                            `
+                            : `
+                            flex-1
+                            flex
+                            items-center
+                            justify-center
+                            gap-2
+                            bg-slate-800
+                            text-slate-500
+                            py-3
+                            rounded-lg
+                            cursor-not-allowed
+                            `;
 
-                    {proyecto.link ? (
-                        <a
-                            href={proyecto.link}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="
-                                flex-1
-                                flex
-                                items-center
-                                justify-center
-                                gap-2
-                                border
-                                border-slate-600
-                                hover:border-sky-400
-                                text-white
-                                py-3
-                                rounded-lg
-                                transition
-                            "
-                        >
-                            Código
-                            <FaGithub />
-                        </a>
-                    ) : (
-                        <span
-                            className="
-                                flex-1
-                                flex
-                                items-center
-                                justify-center
-                                gap-2
-                                bg-slate-800
-                                text-slate-500
-                                py-3
-                                rounded-lg
-                                cursor-not-allowed
-                            "
-                        >
-                            Código
-                            <FaGithub />
-                        </span>
-                    )}
+                        const contenido = (
+                            <>
+                                {boton.texto}
+                                {esGithub ? <FaGithub /> : <FaEye />}
+                            </>
+                        );
+
+                        return boton.url ? (
+                                boton.url.startsWith("/") ? (
+                                <Link
+                                    key={idx}
+                                    to={boton.url}
+                                    className={clases}
+                                >
+                                    {contenido}
+                                </Link>
+                                ) : (
+                                <a
+                                    key={idx}
+                                    href={boton.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clases}
+                                >
+                                    {contenido}
+                                </a>
+                                )
+                            ) : (
+                                <span
+                                key={idx}
+                                className={clases}
+                                >
+                                    {contenido}
+                                </span>
+                            );
+
+                    })}
 
                 </div>
-
             </div>
         </div>
     );

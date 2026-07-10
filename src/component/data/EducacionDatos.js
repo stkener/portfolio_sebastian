@@ -9,14 +9,19 @@ import codoACodo from "../documents/CAC.jpg"
 
 export const formacionAcademica=[
     {
+        "titulo":"Licenciatura en Informatica",
+        "institucion":"Uiversidad Nacional de Hurlingham (UNAHUR)",
+        "año":"En curso"
+    },
+    {
         "titulo":"Tecnicatura Universitaria en Programacion",
         "institucion":"Uiversidad Nacional de Hurlingham (UNAHUR)",
-        "año":"presente"
+        "año":"2025"
     },
     {
         "titulo":"Profesorado de Educacion Fisica",
         "institucion":"I.S.F.D.y T. Nº 209 'Ceferino Namuncurá'",
-        "año":"presente"   
+        "año":"En curso"   
     },
     {
         "titulo":"Técnico Superior en Periodismo deportivo",

@@ -1,10 +1,11 @@
 import {
     proyectosDestacados,
     desarrolloWeb,
-    herramientasAutomatizacion,
+    proyectosInstitucionales,
     proyectosAcademicos,
     proyectosAprendizaje
 } from "./data/ProyectosDatos";
+
 
 import TarjetaProyecto from "./TarjetaProyecto";
 
@@ -60,18 +61,18 @@ const Proyectos = () => {
                 )}
 
                 <Seccion
-                    titulo="Desarrollo Web"
-                    proyectos={desarrolloWeb}
-                />
-
-                <Seccion
-                    titulo="Herramientas y Automatización"
-                    proyectos={herramientasAutomatizacion}
+                    titulo="Proyectos Institucionales"
+                    proyectos={proyectosInstitucionales}
                 />
 
                 <Seccion
                     titulo="Proyectos Académicos"
                     proyectos={proyectosAcademicos}
+                />
+
+                <Seccion
+                    titulo="Proyectos Profesionales"
+                    proyectos={desarrolloWeb}
                 />
 
                 <Seccion
