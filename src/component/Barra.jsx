@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -41,9 +42,6 @@ const Navbar = () => {
                 w-full
                 z-50
                 bg-transparent
-                
-                
-                
             "
         >
             <div className="max-w-6xl mx-auto px-6">
@@ -51,14 +49,14 @@ const Navbar = () => {
                 <div className="h-16 flex items-center justify-end">
 
                     {/* DESKTOP */}
-                    
+
                     <nav className="hidden md:flex items-center gap-8">
-                    
 
                         {links.map((link) => (
-                            <a
+
+                            <Link
                                 key={link.nombre}
-                                href={link.href}
+                                to={link.href}
                                 className="
                                     text-slate-300
                                     hover:text-sky-400
@@ -66,12 +64,13 @@ const Navbar = () => {
                                 "
                             >
                                 {link.nombre}
-                            </a>
+                            </Link>
+
                         ))}
 
                     </nav>
 
-                    {/* BOTON MOBILE */}
+                    {/* BOTÓN MOBILE */}
 
                     <button
                         className="
@@ -79,9 +78,7 @@ const Navbar = () => {
                             text-white
                             text-3xl
                         "
-                        onClick={() =>
-                            setMenuAbierto(!menuAbierto)
-                        }
+                        onClick={() => setMenuAbierto(!menuAbierto)}
                     >
                         {menuAbierto ? <HiX /> : <HiMenu />}
                     </button>
@@ -90,7 +87,7 @@ const Navbar = () => {
 
             </div>
 
-            {/* MENU MOBILE */}
+            {/* MENÚ MOBILE */}
 
             {menuAbierto && (
 
@@ -107,20 +104,18 @@ const Navbar = () => {
 
                         {links.map((link) => (
 
-                            <a
+                            <Link
                                 key={link.nombre}
-                                href={link.href}
+                                to={link.href}
                                 className="
                                     py-3
                                     text-slate-300
                                     hover:text-sky-400
                                 "
-                                onClick={() =>
-                                    setMenuAbierto(false)
-                                }
+                                onClick={() => setMenuAbierto(false)}
                             >
                                 {link.nombre}
-                            </a>
+                            </Link>
 
                         ))}
 
